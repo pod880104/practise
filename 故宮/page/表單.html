@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊</title>
+    <link rel="icon" href="/故宮/2-22+favicon.ico">
+</head>
+
+<body>
+    <form action="">
+        <label for="name">姓名:</label>
+        <input type="text" id="name" name="neme" placeholder="請輸入真實姓名">
+        <hr />
+        <label for="age">年齡</label>
+        <input type="number" name="age" id="age" min="0" max="120">
+        <hr />
+        <fieldset>
+            <legend>性別</legend>
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="male">男</label>
+            <input type="radio" id="female" name="gender" value="male" required />
+            <label for="female">女</label>
+            <input type="radio" id="other" name="gender" value="male" required />
+            <label for="other">其他</label>
+        </fieldset>
+        <hr />
+        <label for="game">興趣</label>
+        <select name="game" id="game" required>
+            <option></option>
+            <option value="1">籃球</option>
+            <option value="2">足球</option>
+            <option value="3">其他</option>
+        </select>
+        <hr />
+        <label for="email">信箱:</label>
+        <input type="email" id="email" name="email" />
+        <hr />
+        <label for="password">密碼</label>
+        <input type="password" name="password" id="password">
+
+
+        <input type="checkbox" id="a">
+        <label for="a">顯示密碼</label>
+        <hr />
+
+
+        <label for="area">地區</label>
+        <input type="text" list="area-list" name="area" id="area">
+        <datalist id="area-list">
+            <option value="台北市">台北市</option>
+            <option value="新北市">新北市</option>
+            <option value="桃園市">桃園市</option>
+            <option value="台中市">台中市</option>
+            <option value="台南市">台南市</option>
+            <option value="高雄市">高雄市</option>
+        </datalist>
+        <hr />
+        <textarea name="suggestion" id="suggestion" cols="30" rows="20" placeholder="給網站的建議"></textarea>
+        <hr />
+        <input type="checkbox" id="電子報" name="電子報" checked>
+        <label for="電子報">訂閱電子報</label>
+        <button>提交表單</button>
+        <a href="/故宮/page/index.html">取消 回首頁</a>
+    </form>
+
+    <script>
+        // 製作顯示密碼功能 
+        let a = document.querySelector("#a");
+        let password = document.querySelector("#password");
+        a.addEventListener("click", () => {
+            if (password.type == "password") {
+                password.type = "text"
+            } else {
+                password.type = "password"
+            }
+        })
+    </script>
+</body>
