@@ -2,14 +2,38 @@
  tr,
  th,
  td {
-     border: 1px solid black;
+     border-bottom: 1px solid black;
      border-collapse: collapse;
+     text-align: center;
+ }
+
+ .hover-color:hover {
+     background-color: khaki;
  }
 
  h1 {
      color: red;
+     text-align: center;
  }
 
  h2 {
      color: orange;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ body {
+     width: 80%;
+     margin: auto;
+ }
+
+ .image {
+     text-align: center;
+     /* background-color: beige; */
+ }
+
+ .loine {
+     text-align: right;
  }
